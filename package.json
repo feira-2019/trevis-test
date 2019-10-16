@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/idemax/trevis-test/issues"
   },
-  "homepage": "https://github.com/idemax/trevis-test#readme"
+  "homepage": "https://github.com/idemax/trevis-test#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1"
+  }
 }
