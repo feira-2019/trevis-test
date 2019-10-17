@@ -16,9 +16,17 @@ describe('Simple calc test:', () => {
 });
 
 describe('Baskara calc test:', () => {
-    it(`a = 1, b = –4, c = –5 == [-1, 5]`, () => {
-        const baskaraRoots = calculate.baskara(1, -4, -5);
-        assert.equal(baskaraRoots[0], -1);
-        assert.equal(baskaraRoots[1], 5);
-    });
+    const baskaraTestData = [{
+        a: 1,
+        b: -4,
+        c: -5,
+        r: [-1, 5]
+    }];
+    for (let i = 0; i < baskaraTestData.length; i++) {
+        it(`a = ${baskaraTestData[i].a}, b = ${baskaraTestData[i].b}, c = ${baskaraTestData[i].c} == [${baskaraTestData[i].r[0]}, ${baskaraTestData[i].r[1]}]`, () => {
+            const baskaraRoots = calculate.baskara(baskaraTestData[i].a, baskaraTestData[i].b, baskaraTestData[i].c);
+            assert.equal(baskaraRoots[0], baskaraTestData[i].r[0]);
+            assert.equal(baskaraRoots[1], baskaraTestData[i].r[1]);
+        });
+    }
 });
