@@ -14,3 +14,11 @@ describe('Simple calc test:', () => {
         }
     }
 });
+
+describe('Baskara calc test:', () => {
+    it(`a = 1, b = –4, c = –5 == [-1, 5]`, () => {
+        const baskaraRoots = calculate.baskara(1, -4, -5);
+        assert.equal(baskaraRoots[0], -1);
+        assert.equal(baskaraRoots[1], 5);
+    });
+});
